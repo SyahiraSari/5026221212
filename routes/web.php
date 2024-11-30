@@ -22,6 +22,34 @@ Route::get('/error', function () {
     return "<h1>Server Error : Ada Kesalahan di Server</h1>";
 });
 
+Route::get('/helopertemuan1', function () {
+    return view('helopertemuan1');
+});
+
+Route::get('/stylepertemuan1', function () {
+    return view('stylepertemuan1');
+});
+
+Route::get('/style2pertemuan1', function () {
+    return view('style2pertemuan1');
+});
+
+Route::get('/responsive1pertemuan2', function () {
+    return view('responsive1pertemuan2');
+});
+
+Route::get('/hiralinktreetugas', function () {
+    return view('hiralinktreetugas');
+});
+
+Route::get('/form', function () {
+    return view('form');
+});
+
+Route::get('/5026221212', function () {
+    return view('5026221212');
+});
+
 // route blog
 Route::get('/blog', 'App\Http\Controllers\BlogController@home');
 Route::get('/blog/tentang', 'App\Http\Controllers\BlogController@tentang');
