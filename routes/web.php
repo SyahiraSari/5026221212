@@ -71,3 +71,12 @@ Route::get('/pegawai/edit/{id}','App\Http\Controllers\PegawaiDBController@edit')
 Route::post('/pegawai/update','App\Http\Controllers\PegawaiDBController@update');
 Route::get('/pegawai/hapus/{id}','App\Http\Controllers\PegawaiDBController@hapus');
 Route::get('/pegawai/cari','App\Http\Controllers\PegawaiDBController@cari');
+
+Route::get('/dvd', 'App\Http\Controllers\DVDController@index_dvd');
+Route::get('/dvd/tambah','App\Http\Controllers\DVDController@tambah_dvd');
+Route::post('/dvd/store','App\Http\Controllers\DVDController@store');
+Route::get('/dvd/edit/{id}','App\Http\Controllers\DVDController@edit');
+Route::post('/dvd/update','App\Http\Controllers\DVDController@update');
+Route::get('/dvd/hapus/{id}','App\Http\Controllers\DVDController@hapus');
+Route::get('/dvd/cari','App\Http\Controllers\DVDController@cari');
+
