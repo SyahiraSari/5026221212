@@ -7,9 +7,10 @@ use Illuminate\Support\Facades\DB;
 
 class KeranjangBelanjaController extends Controller
 {
+
     public function index()
     {
-        $keranjangbelanja = DB::table('keranjangbelanja')->get();
+        $keranjangbelanja = DB::table('keranjangbelanja')->paginate(10);
         return view('indexKeranjangBelanja', ['keranjangbelanja' => $keranjangbelanja]);
     }
 
@@ -35,4 +36,5 @@ class KeranjangBelanjaController extends Controller
         DB::table('keranjangbelanja')->where('ID', $id)->delete();
         return redirect('/keranjangbelanja')->with('success', 'Data berhasil dihapus.');
     }
+
 }

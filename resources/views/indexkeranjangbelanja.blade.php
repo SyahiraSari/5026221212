@@ -42,5 +42,11 @@
         </tbody>
     </table>
     <br/>
+	Halaman : {{ $keranjangbelanja->currentPage() }} <br/>
+	Jumlah Data : {{ $keranjangbelanja->total() }} <br/>
+	Data Per Halaman : {{ $keranjangbelanja->perPage() }} <br/>
+
+
+	{{ $keranjangbelanja->links() }}
 </div>
 @endsection
