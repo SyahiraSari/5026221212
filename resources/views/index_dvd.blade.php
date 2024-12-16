@@ -33,7 +33,13 @@
 			<td>{{ $dvd->kodedvd }}</td>
 			<td>{{ $dvd->merkdvd }}</td>
 			<td>{{ $dvd->stockdvd }}</td>
-			<td>{{ $dvd->tersedia }}</td>
+            <td>
+                @if ($p->tersedia === 'Y')
+                    <i class="fa-solid fa-check text-success"></i>
+                @else
+                    <i class="fa-solid fa-check text-success"></i>
+                @endif
+            </td>
 			<td>
 				<a href="/dvd/edit/{{ $dvd->kodedvd }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
 				<a href="/dvd/hapus/{{ $dvd->kodedvd }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
@@ -41,5 +47,11 @@
 		</tr>
 		@endforeach
 	</table>
+</br>
+Halaman : {{ $dvd->currentPage() }} <br/>
+	Jumlah Data : {{ $dvd->total() }} <br/>
+	Data Per Halaman : {{ $dvd->perPage() }} <br/>
+
+	{{ $dvd->links() }}
 
 @endsection

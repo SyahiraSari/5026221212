@@ -80,3 +80,7 @@ Route::post('/dvd/update','App\Http\Controllers\DVDController@update');
 Route::get('/dvd/hapus/{id}','App\Http\Controllers\DVDController@hapus');
 Route::get('/dvd/cari','App\Http\Controllers\DVDController@cari');
 
+Route::get('/keranjangbelanja', 'App\Http\Controllers\KeranjangBelanjaController@index');
+Route::get('/keranjangbelanja/create', 'App\Http\Controllers\KeranjangBelanjaController@create');
+Route::post('/keranjangbelanja/store', 'App\Http\Controllers\KeranjangBelanjaController@store');
+Route::delete('keranjangbelanja/destroy/{ID}', 'App\Http\Controllers\KeranjangBelanjaController@destroy');
