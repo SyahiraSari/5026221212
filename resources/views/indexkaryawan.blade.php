@@ -36,8 +36,8 @@
             <td>{{ $k->divisi }}</td>
             <td>{{ $k->departemen }}</td>
             <td>
-                <a href="/karyawan/edit/{{ $k->karyawan_id }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
-                <a href="/karyawan/hapus/{{ $k->karyawan_id }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                <a href="/karyawan/edit/{{ $k->kodepegawai }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
+                <a href="/karyawan/hapus/{{ $k->kodepegawai }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
             </td>
         </tr>
         @endforeach
