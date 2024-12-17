@@ -23,32 +23,33 @@
 
 	<table class="table table-stripped table-hover">
 		<tr>
-			<th>kodedvd</th>
-			<th>merkdvd</th>
-			<th>stockdvd</th>
-			<th>tersedia</th>
+			<th>Kode</th>
+			<th>Merk</th>
+			<th>Stock</th>
+			<th>Tersedia</th>
+            <th>Opsi</th>
 		</tr>
-		@foreach($dvd as $dvd)
+		@foreach($dvd as $d)
 		<tr>
-			<td>{{ $dvd->kodedvd }}</td>
-			<td>{{ $dvd->merkdvd }}</td>
-			<td>{{ $dvd->stockdvd }}</td>
+			<td>{{ $d->kodedvd }}</td>
+			<td>{{ $d->merkdvd }}</td>
+			<td>{{ $d->stockdvd }}</td>
             <td>
-                @if ($p->tersedia === 'Y')
+                @if ($d->tersedia === 'Y')
                     <i class="fa-solid fa-check text-success"></i>
                 @else
-                    <i class="fa-solid fa-check text-success"></i>
+                    <i class="fa-solid fa-minus text-danger"></i>
                 @endif
             </td>
 			<td>
-				<a href="/dvd/edit/{{ $dvd->kodedvd }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
-				<a href="/dvd/hapus/{{ $dvd->kodedvd }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+				<a href="/dvd/edit/{{ $d->kodedvd }}" class="btn btn-info"><i class="fa-solid fa-pen-to-square"></i></a>
+				<a href="/dvd/hapus/{{ $d->kodedvd }}" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
 			</td>
 		</tr>
 		@endforeach
 	</table>
 </br>
-Halaman : {{ $dvd->currentPage() }} <br/>
+    Halaman : {{ $dvd->currentPage() }} <br/>
 	Jumlah Data : {{ $dvd->total() }} <br/>
 	Data Per Halaman : {{ $dvd->perPage() }} <br/>
 
